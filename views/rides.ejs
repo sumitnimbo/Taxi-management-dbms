@@ -1,0 +1,43 @@
+<% include ./partials/header %>
+
+<div class="ui main text container" style="margin-top:2em">
+    <div class="ui huge header">Rides List</div>
+ <div class="ui top attached segment">
+<!-- <div class="ui divided items"> -->
+
+  <table class="ui striped table">
+    <thead>
+      <tr>
+        <th>Starting POint</th>
+        <th>End Point</th>
+        <th>Cost</th>
+        <th>Driver Id</th>
+        <th>Customer Id</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% rides.forEach(function(ride){ %>
+      <tr>
+        <td>
+        <%= ride.startingPoint %> 
+        </td>
+        <td><%= ride.endPoint %></td>
+        <td><%= ride.estimateCost %></</td>
+        <td><%= ride.dname %></</td>
+        <td><%= ride.name %>
+            
+        </td>
+      </tr>
+
+       <% }); %>
+      </tbody>
+    </table>
+
+</div>
+</a>
+</div>
+
+ 
+</div>
+
+<% include ./partials/footer %>

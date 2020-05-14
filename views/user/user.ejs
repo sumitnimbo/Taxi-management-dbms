@@ -1,0 +1,47 @@
+<% include ../partials/header %>
+
+<div class="ui main text container" style="margin-top:2em">
+    <div class="ui huge header">Users List</div>
+ <div class="ui top attached segment">
+<!-- <div class="ui divided items"> -->
+
+  <table class="ui striped table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% users.forEach(function(user){ %>
+      <tr>
+        <td>
+            <div class="task"><span class="delete list">
+                <form action="/user/delete/<%= user.id %>?_method=DELETE" method="POST" style="width: 10px;">
+                  <button class="useless"><i class="trash icon"></i></button> 
+                  </form> 
+            </span><%= user.name %> </div>
+
+        </td>
+        <td><%= user.age %></td>
+        <td><%= user.address %>
+          
+          <a href="/user/<%= user.id %>/edit" ><i class="edit outline icon edits"></i> </a>  
+        </td>
+      </tr>
+
+       <% }); %>
+      </tbody>
+    </table>
+
+</div>
+<a href="/user/new">
+<div class="ui right floated small primary labeled icon button" style="margin-top: 10px;"><i class="user icon"></i> Add User</div>
+</a>
+</div>
+
+ 
+</div>
+
+<% include ../partials/footer %>

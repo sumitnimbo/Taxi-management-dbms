@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<div class="ui main text container segment" style='margin-top:5em'>
+    <div class="ui huge header"> Edit <%= taxi.model %>   <%= taxi.id %></div>
+    <form class="ui form" method="POST" action="/taxi/edit/<%= taxi.id %>?_method=PUT">
+    <div class="field">
+        <label>Model</label>
+        <input type="text" placeholder="Model" name="model" value="<%= taxi.model %>">
+    </div>
+    <div class="field">
+            <label>Number Plate </label>
+            <input type="text" placeholder="Number Plate Info" name="numberplate" value="<%= taxi.numberplate %>">
+    </div>
+    <div class="field">
+        <label>Year of Purchase</label>
+        <input type="text" placeholder="Year of Purchase" name="yearOfPur" value="<%= taxi.yearOfPur %>">
+    </div>
+    <div class="field">
+        <label>Brand</label>
+        <input type="text" placeholder="Brand" name="brand" value="<%= taxi.brand %>">
+    </div>
+    <div class="ui inverted sement">
+        <button class="ui inverted primary button">Submit</button>
+    </div>
+    </form>
+</div>
+
+
+<% include ../partials/footer %>

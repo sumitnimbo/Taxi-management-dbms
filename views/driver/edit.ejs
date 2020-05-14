@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+
+<div class="ui main text container segment" style='margin-top:7em'>
+    <div class="ui huge header">Edit <%= driver.name %> </div>
+    <form class="ui form" method="POST" action="/driver/edit/<%= driver.id %>?_method=PUT">
+    <div class="field">
+        <label>Name</label>
+        <input type="text" placeholder="Name" name="name" value="<%= driver.name %>">
+    </div>
+    <div class="field">
+            <label>Age </label>
+            <input type="text" placeholder="Age" name="age" value="<%= driver.age %>">
+    </div>
+    <div class="field">
+        <label>Experiance</label>
+        <input type="text" placeholder="Year of Experiance" name="experiance" value="<%= driver.experiance %>">
+    </div>
+    <div class="field">
+        <label>Rating</label>
+        <input type="text" placeholder="Rating" name="rating" value="<%= driver.rating %>">
+    </div>
+    <div class="field">
+            <label>Address</label>
+            <input type="text" placeholder="Address" name="address" value="<%= driver.address %>">
+        </div>
+    <div class="field">
+                <label>Taxi</label>
+                <input type="text" placeholder="Taxi Model Name" name="taxiid" value="<%= driver.model %>">
+    </div>
+    <div class="ui inverted sement">
+        <button class="ui inverted primary button">Submit</button>
+    </div>
+    </form>
+</div>
+
+
+<% include ../partials/footer %>

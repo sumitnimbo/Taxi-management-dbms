@@ -1,0 +1,55 @@
+<% include ../partials/header %>
+
+<div class="ui main text container" style="margin-top:2em">
+    <div class="ui huge header">List of Taxi</div>
+ <div class="ui top attached segment">
+<!-- <div class="ui divided items"> -->
+
+  <table class="ui striped table">
+    <thead>
+      <tr>
+        <th>Model</th>
+        <th>Brand</th>
+        <th>Number Plate Info</th>
+        <th>Year Of Purchase</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% taxis.forEach(function(taxi){ %>
+      <tr>
+        <td>
+            <div class="task"><span class="delete list">
+                <form action="/taxi/delete/<%= taxi.id %>?_method=DELETE" method="POST" style="width: 10px;">
+                  <button class="useless"><i class="trash icon"></i></button> 
+                  </form> 
+            </span><%= taxi.model %> </div>
+            
+            
+    
+         
+        </td>
+        <td><%= taxi.brand %></td>
+        <td><%= taxi.numberplate %></</td>
+        <td><%= taxi.yearOfPur %>
+          
+          <a href="/taxi/<%= taxi.id %>/edit"><i class="edit outline icon edits"></i> </a>  
+        </td>
+      </tr>
+
+       <% }); %>
+      </tbody>
+    </table>
+
+</div>
+<a href="/taxi/new">
+<div class="ui right floated small primary labeled icon button" style="margin-top: 10px;"><i class="user icon"></i> Add Taxi</div>
+</a>
+</div>
+
+ 
+</div>
+
+<!-- <div class="footerit" style="margin-top:80px;height:40px;background-color:black;color:white;text-allign:center">With <img class="footHeart" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/220px-Heart_coraz%C3%B3n.svg.png"> From Panda </div> -->
+
+
+<% include ../partials/footer %>

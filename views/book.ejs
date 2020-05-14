@@ -1,0 +1,262 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" href="/stylesheet/app.css">
+        	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <meta name="viewport" content="width=500, initial-scale=1">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+        <title>A Taxi Management System</title>
+        <link rel="icon" type="Icon (.ico)" href="https://cfcdnpull-creativefreedoml.netdna-ssl.com/wp-content/uploads/2017/03/taxi-app-icon-design_01.png">
+    <title >CabII </title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cambay|Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+<!--    favicon link-->
+    <link rel="icon" type="image/jpg" href="z.jpg"/>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        html { height: 700px; overflow: hidden; }
+        body
+        {
+            margin: 0;
+            overflow: hidden;
+        }
+        ::selection
+        {
+            color: white;
+            background-color: rgb(32, 46, 77);
+        }
+        :focus{
+            border: none;
+        }
+        .page
+        {   display: block;
+            width: 90%;
+            height: 190px;
+            font-family: 'Poiret One', cursive;
+            clear: both;
+            padding:100px 0px 25px 66.50px; 
+            color: white;
+        }
+        .inpage
+        {
+            width: 90%;
+            height: 150px;
+           
+            margin-left: 70px;
+        }
+        .h1
+        {
+            font-size: 60px;
+            margin-bottom: 0px;
+        }
+        .h2
+        {   font-size: 55px;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+        select:focus{
+	        border: none;
+	        outline: none;
+        }
+        .moto
+        {
+            width: 100%;
+            height: 420px;
+           
+
+        }
+        .signup-form
+        {
+            width: 400px;
+            height: 350px;
+            background-color: #f7f8f9;
+            float: right;
+            margin-top: -150px;
+            margin-right: 150px;
+            padding: 32px;
+            
+        }
+        .user
+        {
+            width: 80px;
+            height:80px;
+            background-image: url(user.png);
+            background-size: 80px 80px;
+            background-repeat: no-repeat;
+            position: absolute;
+        }
+        .sign
+        {
+            margin-left: 50px;
+            font-size: 32px;
+            margin-top: 25px;
+        }
+        .form
+        {
+            font-family: 'Cambay', sans-serif;
+        }
+    
+        #email,#phone,#password,#city,#code
+        {
+            width: 334px;
+            height: 50px;
+            padding: 10px;
+            border: none;
+            font-size: 20px;
+            
+        }
+        #email,#city,#code
+        {
+            margin-top: 20px;
+        }
+        .back{
+            background-image: url(https://images.unsplash.com/photo-1534838813692-d6d37d710f9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+            background-size:cover;
+            background-repeat: no-repeat;
+            height: 750px;
+        }
+        input{
+            background-color: #F6F6F6       
+        }
+        .btn2
+        {
+            width: 334px;
+            height: 50px;
+            padding: 10px; 
+            font-size: 30px;
+            border: none;
+            font-family: occupied;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 50px;
+            box-shadow: 3px 3px 5px grey;
+        }
+        .form-footer
+        {
+            font-family: 'Cambay', sans-serif;
+        }
+        .form-footer span
+        {
+            color: forestgreen;
+        }
+
+
+        
+        #login-rider{
+            text-decoration: none;
+            color:forestgreen;
+            
+        }
+    </style>
+    </head>
+<body>
+<!--    navigation bar-->
+<div class="ui massive inverted menu">
+    <a class="active item">
+        Cabbii 
+    </a>
+    <a class="item" href="/taxi">
+        Taxi
+    </a>
+    <a class="item" href="/User">
+      User
+    </a>
+    <a class="item" href="/driver">
+      Driver
+    </a>
+    <div class="right menu">
+
+      <div class="item">
+          <a href="/">
+                <div class="ui primary button">Member?</div>    
+          </a>
+      </div>
+    </div>
+  </div>
+<!--    down the navigation bar-->
+<div class="back" style="background-image: url(https://images.unsplash.com/photo-1534838813692-d6d37d710f9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);">
+
+ <div class="page">
+     <div class="inpage">
+         <h1 class="h1">Get there </h1>
+         <h1 class="h2">Where </h1>
+         <h1 class="h2">Your day calls you</h1>
+     </div>
+    </div>
+    
+<!--    form filling-->
+
+    <div class="moto">
+            
+    <div class="signup-form">
+        <div class="user"></div>
+        <h4 class="sign">Request a Ride</h4>
+        <div class="form">
+        <form method="POST" action="/ride" onsubmit="return validate(this)">
+            
+            <!-- <input type="email" id="email" placeholder="Enter Pickup Point" name="startingPoint"> -->
+            <select name="startingPoint" id="email">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Lucknow">Lucknow</option>
+                    <option value="Guwahati">Guwahati</option>
+                    <option value="Patna">Patna</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Bhopal">Bhopal</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Jaipur">Jaipur</option>
+            </select>
+            <select name="endPoint" id="email">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Lucknow">Lucknow</option>
+                    <option value="Guwahati">Guwahati</option>
+                    <option value="Patna">Patna</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Bhopal">Bhopal</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Jaipur">Jaipur</option>
+            </select>
+            <input name="estimateCost" style="display: none;" value="245"></input>
+            <input name="custormerId" style="display: none;" value="2"></input>
+            <input name="driverId" style="display: none;" value="2"></input>
+            <button class="ui black button btn2" id="book" style="margin-top: 10px;font-size: 20px;border-radius: 0;">Book the Ride</button>
+        </form> 
+
+        <button class="ui black button confirm" id="confirm" style="margin-top: 15px;font-size: 20px;border-radius: 0;display: none;">Confirm</button>
+        <button class="ui black button confirm" style="margin-top: 15px;font-size: 20px;border-radius: 0;display: none;">Cancel</button>
+            <p class="form-footer">Or <span><a href="login%20driver.html" id="login-rider">Log In </a></span> with your rider account. 
+            </p>
+        </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+    <script>
+            var button=document.querySelector("#book");
+            button.addEventListener("click",()=>{
+                document.querySelectorAll(".confirm").style.display="inline";
+                
+            })
+            </script>
+</html>

@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<div class="ui main text container segment" style='margin-top:7em'>
+    <div class="ui huge header">Taxi</div>
+    <form class="ui form" method="POST" action="/taxi">
+    <div class="field">
+        <label>Model</label>
+        <input type="text" placeholder="Model" name="model">
+    </div>
+    <div class="field">
+            <label>Number Plate </label>
+            <input type="text" placeholder="Number Plate Info" name="numberplate">
+    </div>
+    <div class="field">
+        <label>Year of Purchase</label>
+        <input type="text" placeholder="Year of Purchase" name="yearOfPur">
+    </div>
+    <div class="field">
+        <label>Brand</label>
+        <input type="text" placeholder="Brand" name="brand">
+    </div>
+    <div class="ui inverted sement">
+        <button class="ui inverted primary button">Submit</button>
+    </div>
+    </form>
+</div>
+
+
+<% include ../partials/footer %>

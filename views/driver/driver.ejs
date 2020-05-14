@@ -1,0 +1,53 @@
+<% include ../partials/header %>
+
+<div class="ui main text container" style="margin-top:2em">
+    <div class="ui huge header">Drivers List</div>
+ <div class="ui top attached segment">
+<!-- <div class="ui divided items"> -->
+
+  <table class="ui striped table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Experaince</th>
+        <th>Rating</th>
+        <th>Address</th>
+        <th>Taxi Rented</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% drivers.forEach(function(driver){ %>
+      <tr>
+        <td>
+            <div class="task"><span class="delete list">
+                <form action="/driver/delete/<%= driver.id %>?_method=DELETE" method="POST" style="width: 10px;">
+                  <button class="useless"><i class="trash icon"></i></button> 
+                  </form> 
+            </span><%= driver.name %> </div>
+
+        </td>
+        <td><%= driver.age %></td>
+        <td><%= driver.experiance %></</td>
+        <td><%= driver.rating %></</td>
+        <td><%= driver.address %></</td>
+        <td><%= driver.model %>
+          
+          <a href="/driver/<%= driver.id %>/edit" ><i class="edit outline icon edits"></i> </a>  
+        </td>
+      </tr>
+
+       <% }); %>
+      </tbody>
+    </table>
+
+</div>
+<a href="/driver/new">
+<div class="ui right floated small primary labeled icon button" style="margin-top: 10px;"><i class="user icon"></i> Add Driver</div>
+</a>
+</div>
+
+ 
+</div>
+
+<% include ../partials/footer %>
